@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registration page</title>
+    <link rel="stylesheet" href="stylr.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Registration page</h2>
+      
+      <form id="registerForm">
+        <input type="text" id="name" placeholder="Enter Name" required />
+        <input type="Email" id="email" placeholder="Enter Email" required />
+         <input type="password" id="Enter Password" placeholder= "Enter Password" required />
+        <input type="password" id="confirmPassword" placeholder="confirmPassword" required />
+        
+        <button type="submit">Register</button>
+      </form>
+      
+      <p id="message"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+<style>
+body{
+  font-family:Arial,sans-serif;
+  background:#f4f6f8;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+.container{
+  background:#fff;
+  padding:30px;
+  width:300px;
+  border-radius:8px;
+  box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h2{
+  text-align:center;
+}
+input{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+}
+
+button{
+   width:100%;
+   padding:10px;
+   background:#007bff;
+   color:white;
+   bordeer:none;
+   cursor:pointer;
+}
+button:hover{
+  background:#0056b3;
+}
+
+#message{
+  text-align:center;
+  margin-top10px;
+  color:red;
+}
+</style>
+
+<script type="module">
+documemnt.getElementById("registerForm").addEventListener("submit"function(e)){
+  e.preventDefault();
+  
+  const password=document.getElementById("password").value;
+  const confirmPassword= document.getElementById("confirmPassword").value;
+  const message= document.getElementById("mesaage");
+  if (Password!==confirmPassword){
+       message.textcontent=passwords do  not match!;
+       return
+  }
+  message.style.color="green";
+  message.textContent="regitration successfull";
+});
+</script>
